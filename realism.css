@@ -1,0 +1,55 @@
+/* ==================================================================================
+   LAPISAN VISUAL REALISTIS
+   Menimpa tampilan saja: latar lab foto-ilustrasi, garis tepi kartun dilunakkan,
+   material (kaca, cairan, porselen, kayu, logam) diberi kilau dan tekstur.
+   ================================================================================== */
+
+/* latar laboratorium (gambar dibuat oleh realism.js) */
+.lab-bg.photo{background-size:cover;background-position:center;background-repeat:no-repeat}
+.lab-bg.photo::before,.lab-bg.photo::after,.lab-bg.photo .bench{display:none}
+
+/* panggung: kaca buram yang lebih tipis agar latar terasa */
+#stage{background:rgba(240,244,247,.5);border-color:rgba(255,255,255,.6);box-shadow:0 18px 50px rgba(10,22,34,.28),inset 0 1px 0 rgba(255,255,255,.7)}
+
+/* kanvas ilustrasi: alas studio foto (putih ke abu, vinyet lembut) */
+.illus{background:radial-gradient(120% 90% at 50% 30%,#ffffff 0%,#eef2f5 55%,#d6dee4 100%)}
+.illus,.zoomstage svg,.zoomcard svg{shape-rendering:geometricPrecision}
+
+/* garis tepi kartun (biru tua tebal) dilunakkan menjadi tepi tipis bernuansa */
+svg [stroke="#1b2f6b"]:not(line):not([fill="none"]):not(text){stroke:rgba(28,42,56,.38);stroke-width:1px}
+svg path[stroke="#1b2f6b"][fill="none"]{stroke:rgba(28,42,56,.6)}
+svg [stroke="#a3241a"]{stroke:rgba(110,14,6,.45);stroke-width:1px}
+svg [stroke="#6f808d"],svg [stroke="#8796a2"]{stroke:rgba(110,132,150,.75);stroke-width:1.2px}
+svg [stroke="#6e4520"]{stroke:rgba(80,46,18,.55);stroke-width:1px}
+svg [stroke="#1e6b2d"]{stroke:rgba(20,60,20,.4);stroke-width:1px}
+svg text[fill="#1b2f6b"]{fill:#2a3a4a}
+
+/* material */
+svg [fill="url(#gGlass)"]{filter:url(#fGlass)}
+svg [fill="url(#gTomS)"],svg [fill="url(#gPulp)"]{filter:url(#fGloss)}
+svg [fill="url(#gCeramic)"]{filter:url(#fMatte)}
+svg [fill="url(#gWood)"]{filter:url(#fWood)}
+svg [fill="url(#gSteel)"]{filter:url(#fGlass)}
+svg [fill="url(#gWater)"],svg [fill="url(#gSol)"],svg [fill="url(#gFilt)"],svg [fill="url(#gEth)"]{mix-blend-mode:multiply}
+
+/* model atom DNA: bagian terpilih menyala, sisanya memudar */
+#dnaSvg{background:radial-gradient(110% 90% at 50% 40%,#22384a 0%,#121d27 70%,#0b1218 100%);border-color:#0b1218}
+#dnaSvg .hot{transition:opacity .25s}
+#dnaSvg:has(.hot.on) .hot:not(.on){opacity:.18}
+#dnaSvg .hot.on{filter:drop-shadow(0 0 4px rgba(86,198,255,.9))}
+#dnaSvg .hot:hover{filter:drop-shadow(0 0 3px rgba(255,255,255,.7))}
+
+/* ikon alat & bahan */
+.tool svg,.tcard svg{filter:drop-shadow(0 3px 3px rgba(10,20,30,.28))}
+.tool{background:linear-gradient(#ffffff,#e9eef2 60%,#dbe2e8)}
+
+/* objek besar di meja kerja mendapat bayangan jatuh lembut */
+.hero{filter:drop-shadow(0 22px 26px rgba(0,0,0,.32))}
+
+/* serabut DNA muncul perlahan */
+.fibers{animation:fibers 1.8s ease both}
+@keyframes fibers{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){.fibers{animation:none}}
+
+/* panel judul sampul: kaca buram */
+.cover-text{background:linear-gradient(160deg,rgba(26,34,42,.74),rgba(36,52,68,.62));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16)}

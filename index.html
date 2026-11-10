@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Lab Virtual DNA Tomat</title>
+<meta name="description" content="Laboratorium virtual isolasi DNA tumbuhan dari buah tomat untuk kelas XII SMA/MA.">
+<meta name="theme-color" content="#1b2f6b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lab DNA Tomat">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="realism.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- material realistis -->
+    <radialGradient id="gTom" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#ffb092"/><stop offset=".14" stop-color="#ff6a45"/><stop offset=".45" stop-color="#e2321b"/><stop offset=".8" stop-color="#b01a0c"/><stop offset="1" stop-color="#6a0b04"/></radialGradient>
+    <radialGradient id="gTomS" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#ff9a7c"/><stop offset=".35" stop-color="#e8391f"/><stop offset=".78" stop-color="#b71c0e"/><stop offset="1" stop-color="#741006"/></radialGradient>
+    <radialGradient id="gTomCut" cx="46%" cy="44%" r="60%"><stop offset="0" stop-color="#ffc2a6"/><stop offset=".35" stop-color="#ff8a62"/><stop offset=".8" stop-color="#ef5a36"/><stop offset="1" stop-color="#cf3519"/></radialGradient>
+    <radialGradient id="gGel" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".95"/><stop offset=".6" stop-color="#f7b45e" stop-opacity=".9"/><stop offset="1" stop-color="#e9733c" stop-opacity=".85"/></radialGradient>
+    <radialGradient id="gSeed" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff6d8"/><stop offset=".7" stop-color="#ead39a"/><stop offset="1" stop-color="#b9975a"/></radialGradient>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8cc157"/><stop offset=".5" stop-color="#4f8a2c"/><stop offset="1" stop-color="#25501a"/></linearGradient>
+    <linearGradient id="gStem" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2e5419"/><stop offset=".45" stop-color="#8fbf5a"/><stop offset="1" stop-color="#2b4d17"/></linearGradient>
+    <linearGradient id="gGlass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity=".85"/><stop offset=".06" stop-color="#dfeaf1" stop-opacity=".5"/><stop offset=".14" stop-color="#ffffff" stop-opacity=".7"/><stop offset=".2" stop-color="#e6f0f6" stop-opacity=".14"/><stop offset=".78" stop-color="#e2edf4" stop-opacity=".1"/><stop offset=".88" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".95" stop-color="#c3d3de" stop-opacity=".45"/><stop offset="1" stop-color="#9fb3c2" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f6fd" stop-opacity=".9"/><stop offset=".08" stop-color="#bfe1f3" stop-opacity=".72"/><stop offset="1" stop-color="#7fb8d8" stop-opacity=".8"/></linearGradient>
+    <linearGradient id="gSol" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4fbf8" stop-opacity=".95"/><stop offset=".1" stop-color="#d3efe4" stop-opacity=".8"/><stop offset="1" stop-color="#a7d8c4" stop-opacity=".88"/></linearGradient>
+    <linearGradient id="gFilt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd2b0" stop-opacity=".92"/><stop offset=".5" stop-color="#f29a6c" stop-opacity=".92"/><stop offset="1" stop-color="#d0643a" stop-opacity=".95"/></linearGradient>
+    <linearGradient id="gEth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".8"/><stop offset=".15" stop-color="#e8f3fa" stop-opacity=".45"/><stop offset="1" stop-color="#c8deec" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="gPulp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a76"/><stop offset=".25" stop-color="#e8502e"/><stop offset=".7" stop-color="#c2351c"/><stop offset="1" stop-color="#8a1e0c"/></linearGradient>
+    <linearGradient id="gCeramic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9b2a6"/><stop offset=".22" stop-color="#e9e5de"/><stop offset=".4" stop-color="#fdfcfa"/><stop offset=".7" stop-color="#e3ded5"/><stop offset="1" stop-color="#a8a094"/></linearGradient>
+    <linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8a676"/><stop offset=".1" stop-color="#c48e5a"/><stop offset=".55" stop-color="#ad7644"/><stop offset="1" stop-color="#7e4f27"/></linearGradient>
+    <linearGradient id="gSteel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6f7a83"/><stop offset=".22" stop-color="#c9d1d7"/><stop offset=".4" stop-color="#f7f9fa"/><stop offset=".52" stop-color="#a3adb5"/><stop offset=".75" stop-color="#dfe5e9"/><stop offset="1" stop-color="#7c878f"/></linearGradient>
+    <radialGradient id="gSkin" cx="42%" cy="35%" r="72%"><stop offset="0" stop-color="#f7dcc6"/><stop offset=".6" stop-color="#e2b394"/><stop offset="1" stop-color="#b98466"/></radialGradient>
+    <linearGradient id="gHair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a473b"/><stop offset=".5" stop-color="#33271f"/><stop offset="1" stop-color="#1b1410"/></linearGradient>
+    <linearGradient id="gCoat" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9d3db"/><stop offset=".3" stop-color="#f4f7f9"/><stop offset=".55" stop-color="#ffffff"/><stop offset="1" stop-color="#c3cdd6"/></linearGradient>
+    <linearGradient id="gShirt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f5a85"/><stop offset=".5" stop-color="#5a8bbd"/><stop offset="1" stop-color="#2c547d"/></linearGradient>
+    <linearGradient id="gPants" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f262f"/><stop offset=".5" stop-color="#3d4756"/><stop offset="1" stop-color="#1c222a"/></linearGradient>
+    <radialGradient id="gGlove" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#cfe8fc"/><stop offset=".45" stop-color="#5d9fe0"/><stop offset="1" stop-color="#245a96"/></radialGradient>
+    <radialGradient id="gAv" cx="50%" cy="30%" r="80%"><stop offset="0" stop-color="#5aa8ee"/><stop offset="1" stop-color="#1d5f9e"/></radialGradient>
+    <linearGradient id="gBench" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f9fa"/><stop offset=".5" stop-color="#e3e8eb"/><stop offset="1" stop-color="#c9d1d6"/></linearGradient>
+    <radialGradient id="gNuc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#e7dcf5"/><stop offset=".55" stop-color="#b9a2d9"/><stop offset="1" stop-color="#7a5ea8"/></radialGradient>
+    <radialGradient id="gVac" cx="42%" cy="38%" r="70%"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset=".6" stop-color="#dcecf6" stop-opacity=".75"/><stop offset="1" stop-color="#a9c8dc" stop-opacity=".85"/></radialGradient>
+    <radialGradient id="gMito" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd9cf"/><stop offset=".6" stop-color="#f09a86"/><stop offset="1" stop-color="#b9503c"/></radialGradient>
+    <radialGradient id="gPlast" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffc39a"/><stop offset=".5" stop-color="#f2632f"/><stop offset="1" stop-color="#a82a10"/></radialGradient>
+    <radialGradient id="gCyto" cx="45%" cy="40%" r="75%"><stop offset="0" stop-color="#fff6ea"/><stop offset="1" stop-color="#f3dcc4"/></radialGradient>
+    <linearGradient id="gWallS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3c98f"/><stop offset=".5" stop-color="#9da665"/><stop offset="1" stop-color="#7d8748"/></linearGradient>
+    <!-- atom (warna CPK) -->
+    <radialGradient id="gAtP" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#ffe1bf"/><stop offset=".3" stop-color="#ff9a33"/><stop offset=".8" stop-color="#b85a0c"/><stop offset="1" stop-color="#5e2c04"/></radialGradient>
+    <radialGradient id="gAtO" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#ffc6c0"/><stop offset=".3" stop-color="#ee3b30"/><stop offset=".8" stop-color="#9c1a12"/><stop offset="1" stop-color="#4e0a06"/></radialGradient>
+    <radialGradient id="gAtC" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#a9b1b7"/><stop offset=".8" stop-color="#5b646b"/><stop offset="1" stop-color="#2a3035"/></radialGradient>
+    <radialGradient id="gAtN" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#d6e0ff"/><stop offset=".3" stop-color="#4a72ee"/><stop offset=".8" stop-color="#1f3a9c"/><stop offset="1" stop-color="#0d1a4e"/></radialGradient>
+    <radialGradient id="gAtNa" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#ecd9ff"/><stop offset=".3" stop-color="#a45be8"/><stop offset=".8" stop-color="#5b2a92"/><stop offset="1" stop-color="#2c1048"/></radialGradient>
+    <radialGradient id="gHead" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#fff0d8"/><stop offset=".4" stop-color="#f0b27a"/><stop offset="1" stop-color="#9c5a2a"/></radialGradient>
+    <radialGradient id="gDet" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#e2ffe9"/><stop offset=".4" stop-color="#4cc283"/><stop offset="1" stop-color="#1d6b43"/></radialGradient>
+    <radialGradient id="gAtH" cx="34%" cy="30%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#e9edf0"/><stop offset="1" stop-color="#8d979f"/></radialGradient>
+    <!-- efek: kilau kaca, kilau basah, bayangan lembut, serabut bercahaya -->
+    <filter id="fGlass" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="b"/>
+      <feSpecularLighting in="b" surfaceScale="2.5" specularConstant="1" specularExponent="26" lighting-color="#ffffff" result="s"><feDistantLight azimuth="225" elevation="48"/></feSpecularLighting>
+      <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="s2"/></feMerge>
+    </filter>
+    <filter id="fGloss" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="b"/>
+      <feSpecularLighting in="b" surfaceScale="4" specularConstant=".85" specularExponent="18" lighting-color="#ffffff" result="s"><feDistantLight azimuth="235" elevation="52"/></feSpecularLighting>
+      <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="s2"/></feMerge>
+    </filter>
+    <filter id="fMatte" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .5  0 0 0 0 .48  0 0 0 0 .45  0 0 0 .22 0" result="nc"/>
+      <feComposite in="nc" in2="SourceAlpha" operator="in" result="tex"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="tex"/></feMerge>
+    </filter>
+    <filter id="fWood" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .45" numOctaves="3" seed="8" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .32  0 0 0 0 .18  0 0 0 0 .07  0 0 0 .55 -.08" result="nc"/>
+      <feComposite in="nc" in2="SourceAlpha" operator="in" result="tex"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="tex"/></feMerge>
+    </filter>
+    <filter id="fSoft" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0a1620" flood-opacity=".28"/></filter>
+    <filter id="fGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation=".9" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="fBlur2"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="fBlur4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+    <symbol id="tomato" viewBox="0 0 120 120">
+      <ellipse cx="60" cy="112" rx="42" ry="5.5" fill="#000" opacity=".32" filter="url(#fBlur2)"/>
+      <path d="M60,24 C95,22 112,46 110,72 C108,98 86,112 60,112 C34,112 12,98 10,72 C8,46 25,22 60,24 Z" fill="url(#gTom)"/>
+      <g fill="none" stroke="#5e0903" stroke-opacity=".3" stroke-width="4" filter="url(#fBlur2)"><path d="M60,30 C55,56 55,84 60,108"/><path d="M38,32 C27,56 29,86 41,104"/><path d="M82,32 C93,56 91,86 79,104"/></g>
+      <ellipse cx="82" cy="92" rx="22" ry="12" fill="#ff8a66" opacity=".22" filter="url(#fBlur4)"/>
+      <ellipse cx="40" cy="50" rx="17" ry="10" fill="#fff" opacity=".42" transform="rotate(-32 40 50)" filter="url(#fBlur2)"/>
+      <ellipse cx="36" cy="46" rx="5" ry="2.6" fill="#fff" opacity=".9" transform="rotate(-32 36 46)"/>
+      <g fill="url(#gLeaf)"><path d="M60,28 C52,25 44,26 36,32 C46,30 53,31 59,31 Z"/><path d="M60,28 C67,24 76,24 86,30 C75,29 68,30 61,31 Z"/><path d="M60,28 C56,22 50,18 44,17 C51,21 55,25 58,30 Z"/><path d="M60,28 C64,21 70,17 78,15 C70,20 66,25 62,30 Z"/><path d="M60,29 C58,34 55,38 50,40 C55,36 57,33 59,29 Z"/><path d="M61,29 C64,34 68,37 73,38 C68,35 65,32 61,29 Z"/></g>
+      <path d="M58,29 C58,20 61,13 67,8 L70,10 C65,15 63,21 63,29 Z" fill="url(#gStem)"/>
+    </symbol>
+    <symbol id="tomhalf" viewBox="0 0 120 120">
+      <ellipse cx="60" cy="111" rx="46" ry="5.5" fill="#000" opacity=".3" filter="url(#fBlur2)"/>
+      <circle cx="60" cy="62" r="48" fill="url(#gTom)"/><circle cx="60" cy="62" r="43" fill="url(#gTomCut)"/>
+      <g fill="url(#gGel)"><path d="M60,58 C52,40 40,30 30,40 C22,50 30,60 56,61 Z"/><path d="M64,58 C70,40 84,30 92,42 C98,52 90,60 66,61 Z"/><path d="M60,67 C50,86 40,94 32,86 C24,76 34,68 56,65 Z"/><path d="M64,67 C72,86 84,94 92,84 C98,74 88,68 66,65 Z"/></g>
+      <g fill="url(#gSeed)" stroke="#a88648" stroke-width=".5"><ellipse cx="38" cy="44" rx="3" ry="4.4" transform="rotate(-30 38 44)"/><ellipse cx="46" cy="40" rx="3" ry="4.4" transform="rotate(-10 46 40)"/><ellipse cx="42" cy="52" rx="3" ry="4.4" transform="rotate(-50 42 52)"/><ellipse cx="82" cy="44" rx="3" ry="4.4" transform="rotate(30 82 44)"/><ellipse cx="74" cy="40" rx="3" ry="4.4" transform="rotate(10 74 40)"/><ellipse cx="78" cy="52" rx="3" ry="4.4" transform="rotate(50 78 52)"/><ellipse cx="38" cy="80" rx="3" ry="4.4" transform="rotate(30 38 80)"/><ellipse cx="46" cy="86" rx="3" ry="4.4" transform="rotate(10 46 86)"/><ellipse cx="82" cy="80" rx="3" ry="4.4" transform="rotate(-30 82 80)"/><ellipse cx="74" cy="86" rx="3" ry="4.4" transform="rotate(-10 74 86)"/></g>
+      <circle cx="60" cy="62" r="9" fill="#ffc7ad" opacity=".9" filter="url(#fBlur2)"/>
+      <ellipse cx="44" cy="40" rx="20" ry="9" fill="#fff" opacity=".28" transform="rotate(-35 44 40)" filter="url(#fBlur2)"/>
+    </symbol>
+    <symbol id="tubeic" viewBox="0 0 40 100"><path d="M8,4 L32,4 L32,82 C32,98 8,98 8,82 Z" fill="url(#gGlass)" stroke="#8fa2b1" stroke-width="1.5"/><path d="M10,50 L30,50 L30,82 C30,95 10,95 10,82 Z" fill="url(#gFilt)"/><rect x="10" y="28" width="20" height="22" fill="url(#gEth)"/><path d="M13,49 c3,-6 6,3 9,-4 c2,-3 4,1 5,-2" stroke="#fff" stroke-width="1.6" fill="none" filter="url(#fGlow)"/><path d="M11,6 L11,86" stroke="#fff" stroke-opacity=".7" stroke-width="2"/></symbol>
+    <symbol id="helix" viewBox="0 0 60 120"></symbol>
+  </defs>
+</svg>
+
+<div class="lab-bg" aria-hidden="true">
+  <div class="bench"></div>
+</div>
+
+<div class="game">
+  <header class="bar">
+    <div class="hdr-l"><button class="rnd blue" id="btnNarr" aria-label="Matikan suara" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3,9 L7,9 L12,4 L12,20 L7,15 L3,15 Z" fill="currentColor"/><path class="wv" d="M15,8 Q18,12 15,16 M17.5,5.5 Q22.5,12 17.5,18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="xx" d="M15,9 L21,15 M21,9 L15,15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="hdr-r"><button class="hudbtn" id="btnHome" aria-label="Ke slide pertama">⌂ Beranda</button><button class="rnd blue" id="btnInfo" aria-label="Tentang dan pengaturan"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="7.5" r="1.6" fill="currentColor"/><path d="M12,11 L12,17" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button></div>
+  </header>
+  <main id="stage"></main>
+  <div class="hudbar">
+    <section class="hud-narr" aria-label="Narator">
+      <div class="hn-head"><span id="sceneNo"></span><span class="hn-r"><span id="hnClock">⏱ 00:00</span><span>Progres <b id="hnProg">0%</b></span></span></div>
+      <div class="hn-body">
+        <div class="hn-av" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="url(#gAv)"/><path d="M8,48 C9,36 16,31 24,31 C32,31 39,36 40,48 Z" fill="#f4f7f9"/><path d="M20,31 L24,38 L28,31" fill="#9cc9ef"/><circle cx="24" cy="21" r="8.5" fill="#e9c3a3"/><path d="M15.5,21 C15,12 21,9 25,9.5 C31,10 33.5,15 32.5,22 C31,17 28,15 24,15 C20,15 17,17 15.5,21 Z" fill="#3a2a22"/><path d="M15.5,21 C14.5,27 16,31 18,32 L18,24 Z M32.5,22 C33.5,27 32,31 30,32 L30,24 Z" fill="#3a2a22"/></svg></div>
+        <div class="hn-text"><p class="hn-name">Dr. Nadia · Peneliti Bioteknologi</p><p id="hnText"></p><p id="hnTask" hidden></p></div>
+        <div class="hn-ctl"><button id="hnPlay" aria-label="Putar narasi">▶</button><button id="hnNext" aria-label="Kalimat berikutnya">⏭</button></div>
+      </div>
+    </section>
+    <nav class="foot" id="foot">
+      <button class="rnd blue" id="prev" aria-label="Slide sebelumnya">◀</button>
+      <button class="btn-y" id="next">Lanjut ▶</button>
+    </nav>
+  </div>
+  <div class="dlg" id="dlg" hidden>
+    <div class="dlg-box panel paper" role="dialog" aria-modal="true" aria-labelledby="dlgTitle">
+      <h2 class="ribbon small" id="dlgTitle"></h2>
+      <div id="dlgBody"></div>
+      <div class="center row" id="dlgBtns"></div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script src="realism.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
